@@ -1,0 +1,9 @@
+@import '../../../../../../assets/styles/guide-style';
+
+.user-options-display-button {
+    height: $baseSize*4;
+    width: $baseSize*4;
+    margin: auto 0 auto auto;
+    display: flex;
+    box-shadow: 0 0 0 transparent !important;
+}

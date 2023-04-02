@@ -1,0 +1,10 @@
+
+@import './sizes.scss';
+
+$screen-xl-min: $baseSize*240;
+
+@mixin xl {
+    @media (max-width: #{$screen-xl-min}) {
+        @content;
+    }
+ }

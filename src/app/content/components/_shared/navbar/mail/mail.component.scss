@@ -1,0 +1,20 @@
+@import '../../../../../../assets/styles/guide-style';
+
+.user-options-display-button {
+    height: $baseSize*4;
+    width: $baseSize*4;
+    margin: auto 0 auto auto;
+    display: flex;
+    box-shadow: 0 0 0 transparent !important;
+}
+
+button.notifications {
+    padding: $baseSize;
+    h5 {
+        margin-bottom: -$baseSize;
+        opacity: 0.6;
+    }
+    span {
+        font-size: $baseSize*1.5;
+    }
+}

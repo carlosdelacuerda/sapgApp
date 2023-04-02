@@ -1,0 +1,21 @@
+.container-lg {
+    width: 1920px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.loading {
+    position: fixed;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    background-color: rgba($color: #fff, $alpha: .8);
+    overflow: hidden;
+    display: flex;
+    top: 0;
+    left: 0;
+    mat-spinner {
+        display: flex;
+        margin: auto;
+    }
+}
+    

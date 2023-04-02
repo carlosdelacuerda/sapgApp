@@ -1,0 +1,30 @@
+@import '../../../../../../assets/styles/guide-style';
+
+mat-toolbar {
+    border-radius: $baseSize;
+    margin-top: $baseSize*2;
+    height: $baseSize*6;
+    padding: $baseSize*2;
+    @include xl {
+        border-radius: 0;
+    }
+    .logo-tool-bar {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        position: absolute;
+        width: $baseSize*8;
+        img {
+            width: 100%
+        }
+    }
+    .left-navbar-menu {
+        margin-left: auto;
+        display: flex;
+        app-mail, app-usermenu {
+            margin-left: $baseSize;
+        }
+    }
+}

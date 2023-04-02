@@ -1,0 +1,17 @@
+<button class="user-options-display-button"
+mat-mini-fab
+color="accent"
+[matMenuTriggerFor]="menu"
+aria-label="User options">
+    <mat-icon aria-hidden="false" fontIcon="mail"></mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item class="notifications">
+        <h5>5 minutes ago</h5>
+        <span>Ana texted you</span>
+    </button>
+    <button mat-menu-item class="notifications">
+        <h5>5 minutes ago</h5>
+        <span>Ana texted you</span>
+    </button>
+</mat-menu>

@@ -1,0 +1,12 @@
+<mat-toolbar color="primary" class="">
+    <div class="logo-tool-bar">
+        <img src="../../../../../../assets/img/brand/logo.svg" alt="">
+    </div>
+    <div class="left-navbar-menu">
+        <ng-container *ngIf="loged">
+            <app-mail></app-mail>
+            <app-usermenu></app-usermenu>
+        </ng-container>
+        <app-login  *ngIf="!loged"></app-login>
+    </div>  
+</mat-toolbar>

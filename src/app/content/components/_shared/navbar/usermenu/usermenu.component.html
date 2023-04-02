@@ -1,0 +1,17 @@
+<button class="user-options-display-button"
+mat-mini-fab
+color="accent"
+[matMenuTriggerFor]="menu"
+aria-label="User options">
+    <mat-icon aria-hidden="false" fontIcon="face"></mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item>
+        <mat-icon aria-hidden="false" fontIcon="manage_accounts"></mat-icon>
+        Settings
+    </button>
+    <button mat-menu-item>
+        <mat-icon aria-hidden="false" fontIcon="power_settings_new"></mat-icon>
+        Log out
+    </button>
+</mat-menu>
