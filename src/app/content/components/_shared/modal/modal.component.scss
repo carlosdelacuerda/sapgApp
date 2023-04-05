@@ -2,4 +2,12 @@
 
 h2 {
     text-align: center;
+    @include color-base;
+    font-weight: bold;
+    mat-icon {
+        position: absolute;
+        right: $baseSize;
+        top: $baseSize;
+        cursor: pointer;
+    }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Type } from '@angular/core';
 import { DialogData } from 'src/app/content/interfaces/modal.interface';
 import { ModalService } from 'src/app/content/services/modal.service';
 
@@ -21,10 +21,8 @@ export class LoginComponent {
   login(){
     this.modalInfo = {
       title: 'LOGIN',
-      component: '<app-login-modal></app-login-modal>'
+      component: 'login'
     }
-    
     this.modalService.openModal(this.modalInfo);
   }
-
 }

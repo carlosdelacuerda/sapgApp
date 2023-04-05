@@ -1,5 +1,8 @@
-<h2 mat-dialog-title>{{ data.title }}</h2>
-<mat-dialog-content >
-    hola
+<h2 mat-dialog-title>
+    {{ data.title }}
+    <mat-icon aria-hidden="false" fontIcon="close" (click)="closeModal()"></mat-icon>
+</h2>
+<mat-dialog-content [ngSwitch]="data.component ">
+    <app-login-modal  *ngSwitchCase="'login'"></app-login-modal>    
 </mat-dialog-content>
 

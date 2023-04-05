@@ -1,0 +1,7 @@
+$baseColor: #3f51b5;
+$baseContrast: #ffffff;
+
+@mixin color-base {
+    background-color: $baseColor !important;
+    color: $baseContrast !important;
+  }

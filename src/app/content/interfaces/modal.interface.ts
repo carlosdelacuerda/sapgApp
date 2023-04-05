@@ -1,4 +1,4 @@
 export interface DialogData {
     title: string,
-    component: any
+    component: string
 }

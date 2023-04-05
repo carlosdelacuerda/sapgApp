@@ -1,0 +1,10 @@
+@import '../../../../../../assets/styles/guide-style';
+
+mat-form-field, button {
+    width: $baseSize*50 ;
+    margin: 0 auto;
+    display: flex;
+}
+button {
+    margin-bottom: $baseSize*2;
+}
