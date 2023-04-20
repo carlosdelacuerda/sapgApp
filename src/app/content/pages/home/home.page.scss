@@ -1,0 +1,9 @@
+@import "../../../../assets/styles/guide-style";
+
+.container-cards {
+    display: flex;
+    app-sponsored-card {
+        width: 25%;
+        padding: $baseSize;
+    }
+}

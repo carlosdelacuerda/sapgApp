@@ -2,12 +2,12 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs'
 import { environment } from 'src/environments/environments';
-import { UserData } from '../interfaces/user.interface';
+import { SponsoredModel } from '../interfaces/sponsored.interface';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export class SponsoredService {
 
   urlBase: string = environment.url;
 
@@ -15,8 +15,7 @@ export class UserService {
     private http: HttpClient
   ) { }
 
-  public getLogin(user: string, password: string): Observable<UserData> {
-    const headers = {user, password}
-    return this.http.get<UserData>(`${this.urlBase}getUser`, { headers });
+  public getSponsoreds(): Observable<SponsoredModel[]> {
+    return this.http.get<SponsoredModel[]>(`${this.urlBase}getSponsoreds`);
   }
 }

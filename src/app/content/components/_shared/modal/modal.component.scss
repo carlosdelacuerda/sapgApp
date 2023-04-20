@@ -6,8 +6,8 @@ h2 {
     font-weight: bold;
     mat-icon {
         position: absolute;
-        right: $baseSize;
-        top: $baseSize;
+        right: $baseSize*2;
+        top: $baseSize*2;
         cursor: pointer;
     }
 }

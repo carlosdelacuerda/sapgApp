@@ -8,9 +8,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarModule } from "./content/components/_shared/navbar/navbar.module";
 import { MatDialog, MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, isDevMode } from '@angular/core';
 import { ModalModule } from './content/components/_shared/modal/modal.module';
-
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { ROOT_REDUCERS } from './content/state/app.state';
+import { EffectsModule } from '@ngrx/effects';
+import { SponsoredsEffects } from './content/state/effects/sponsoreds.effects';
 @NgModule({
     declarations: [
         AppComponent
@@ -23,7 +27,10 @@ import { ModalModule } from './content/components/_shared/modal/modal.module';
         HttpClientModule,
         MatProgressSpinnerModule,
         MatDialogModule,
-        ModalModule
+        ModalModule,
+        StoreModule.forRoot( ROOT_REDUCERS ),
+        StoreDevtoolsModule.instrument({ name: 'TEST', logOnly: !isDevMode() }),
+        EffectsModule.forRoot([SponsoredsEffects])
     ],
     providers: [
         LoadingInterceptor,
