@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MailComponent } from './mail.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 
 describe('MailComponent', () => {
   let component: MailComponent;
@@ -8,7 +10,8 @@ describe('MailComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MailComponent ]
+      declarations: [ MailComponent ],
+      imports: [ MatIconModule, MatMenuModule ]
     })
     .compileComponents();
 

@@ -8,7 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarModule } from "./content/components/_shared/navbar/navbar.module";
 import { MatDialog, MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { CUSTOM_ELEMENTS_SCHEMA, isDevMode } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA, isDevMode } from '@angular/core';
 import { ModalModule } from './content/components/_shared/modal/modal.module';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -46,7 +46,8 @@ import { SponsoredsEffects } from './content/state/effects/sponsoreds.effects';
         }
     ],
     schemas: [
-        CUSTOM_ELEMENTS_SCHEMA
+        CUSTOM_ELEMENTS_SCHEMA,
+        NO_ERRORS_SCHEMA
       ],
     bootstrap: [AppComponent],
 })

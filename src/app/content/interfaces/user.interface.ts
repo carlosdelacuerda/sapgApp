@@ -1,9 +1,9 @@
 export interface UserLogin {
     name: string,
-    passworkd: string
+    password: string
 }
 
-export interface UserData {
+export interface UserModel {
     id: number,
     userName: string,
     name: string,
