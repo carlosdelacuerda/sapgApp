@@ -26,14 +26,14 @@ export class LoginModalComponent implements OnInit {
 
     public buildForm() {
       this.formGroup = this.formBuilder.group({
-        email: new FormControl('', [Validators.required, Validators.email]),
+        name: new FormControl('', [Validators.required, Validators.email]),
         password: new FormControl('', [Validators.required, Validators.minLength(4)]),    
       });
     }
 
     sendLogin() {
       let user: UserLogin  = this.formGroup.value
-      this.store.dispatch(loadUser());
+      this.store.dispatch(loadUser({payload: { name: user.name, password: user.password}}));
     }
 
 

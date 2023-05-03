@@ -3,6 +3,12 @@ import { UserLogin, UserModel } from '../../interfaces/user.interface';
 
 export const loadUser = createAction (
     '[ User Data ] Load User',
+    props<{
+        payload: {
+            name: string,
+            password: string
+        }
+    }>()
 )
 
 export const loadedUser = createAction (

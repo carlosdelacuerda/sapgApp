@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs'
 import { environment } from 'src/environments/environments';
-import { UserModel } from '../interfaces/user.interface';
-
+import { UserLogin, UserModel } from '../interfaces/user.interface';
+import { map } from 'rxjs/operators'
 @Injectable({
   providedIn: 'root'
 })
@@ -15,8 +15,9 @@ export class UserService {
     private http: HttpClient
   ) { }
 
-  public postLogin(user: string, password: string): Observable<UserModel> {
-    console.log(user, password)
-    return this.http.post<UserModel>(`${this.urlBase}getUser`, { user, password });
+  public postLogin(data:any): Observable<UserModel> {
+    let name = data.data.payload.name;
+    let password = data.data.payload.password;
+    return this.http.post<UserModel>(`${this.urlBase}getUser`, { name, password });
   }
 }
