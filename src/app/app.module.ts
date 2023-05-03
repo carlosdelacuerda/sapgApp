@@ -15,6 +15,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { ROOT_REDUCERS } from './content/state/app.state';
 import { EffectsModule } from '@ngrx/effects';
 import { SponsoredsEffects } from './content/state/effects/sponsoreds.effects';
+import { UserEffects } from './content/state/effects/user.effects';
 @NgModule({
     declarations: [
         AppComponent
@@ -30,7 +31,7 @@ import { SponsoredsEffects } from './content/state/effects/sponsoreds.effects';
         ModalModule,
         StoreModule.forRoot( ROOT_REDUCERS ),
         StoreDevtoolsModule.instrument({ name: 'TEST', logOnly: !isDevMode() }),
-        EffectsModule.forRoot([SponsoredsEffects])
+        EffectsModule.forRoot([SponsoredsEffects, UserEffects])
     ],
     providers: [
         LoadingInterceptor,

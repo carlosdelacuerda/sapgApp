@@ -5,7 +5,7 @@
     <div class="left-navbar-menu">
         <ng-container *ngIf="loged">
             <app-mail></app-mail>
-            <app-usermenu></app-usermenu>
+            <app-usermenu [user]="user"></app-usermenu>
         </ng-container>
         <app-login  *ngIf="!loged"></app-login>
     </div>  

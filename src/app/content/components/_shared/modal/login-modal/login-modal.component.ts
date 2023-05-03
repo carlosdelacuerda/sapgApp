@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { UserModel, UserLogin } from 'src/app/content/interfaces/user.interface';
-import { UserService } from 'src/app/content/services/user.service';
+import { loadUser } from 'src/app/content/state/actions/user.actions';
+import { AppState } from 'src/app/content/state/app.state';
 @Component({
   selector: 'app-login-modal',
   templateUrl: './login-modal.component.html',
@@ -15,7 +17,7 @@ export class LoginModalComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private userService: UserService
+    private store: Store<AppState>
     ){}
 
     ngOnInit(): void {
@@ -31,10 +33,7 @@ export class LoginModalComponent implements OnInit {
 
     sendLogin() {
       let user: UserLogin  = this.formGroup.value
-      this.userService.postLogin(user.name, user.password).subscribe( response =>
-        console.log(response)
-      )
-
+      this.store.dispatch(loadUser());
     }
 
 

@@ -16,6 +16,7 @@ export class UserService {
   ) { }
 
   public postLogin(user: string, password: string): Observable<UserModel> {
+    console.log(user, password)
     return this.http.post<UserModel>(`${this.urlBase}getUser`, { user, password });
   }
 }

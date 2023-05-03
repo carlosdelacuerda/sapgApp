@@ -17,7 +17,7 @@ export class HomePage implements OnInit {
   list: SponsoredModel[] = [];
 
   constructor(
-    private store: Store<AppState>,
+    private store: Store<AppState>
   ){ }
 
   ngOnInit(): void {

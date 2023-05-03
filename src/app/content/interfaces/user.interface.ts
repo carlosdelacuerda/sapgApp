@@ -10,3 +10,7 @@ export interface UserModel {
     lastName: string,
     birthDate: string
 }
+export interface UserState {
+    logged: boolean,
+    user: Readonly<UserModel>
+}
